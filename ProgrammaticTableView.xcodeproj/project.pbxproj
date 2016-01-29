@@ -12,7 +12,8 @@
 		1C34EB181C5803F800563D0E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1C34EB171C5803F800563D0E /* Assets.xcassets */; };
 		1C34EB261C5803F900563D0E /* ProgrammaticTableViewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C34EB251C5803F900563D0E /* ProgrammaticTableViewTests.m */; };
 		1C34EB311C5803F900563D0E /* ProgrammaticTableViewUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C34EB301C5803F900563D0E /* ProgrammaticTableViewUITests.m */; };
-		1C95E2071C582FE90036CAD7 /* TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C95E2061C582FE90036CAD7 /* TableViewController.m */; };
+		1C95E20A1C59B2790036CAD7 /* TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C95E2091C59B2790036CAD7 /* TableViewController.m */; };
+		1C95E20D1C59B3770036CAD7 /* TableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C95E20C1C59B3770036CAD7 /* TableViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,8 +46,10 @@
 		1C34EB2C1C5803F900563D0E /* ProgrammaticTableViewUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ProgrammaticTableViewUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1C34EB301C5803F900563D0E /* ProgrammaticTableViewUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ProgrammaticTableViewUITests.m; sourceTree = "<group>"; };
 		1C34EB321C5803F900563D0E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		1C95E2051C582FE90036CAD7 /* TableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TableViewController.h; path = ../TableViewController.h; sourceTree = "<group>"; };
-		1C95E2061C582FE90036CAD7 /* TableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TableViewController.m; path = ../TableViewController.m; sourceTree = "<group>"; };
+		1C95E2081C59B2790036CAD7 /* TableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewController.h; sourceTree = "<group>"; };
+		1C95E2091C59B2790036CAD7 /* TableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewController.m; sourceTree = "<group>"; };
+		1C95E20B1C59B3770036CAD7 /* TableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewCell.h; sourceTree = "<group>"; };
+		1C95E20C1C59B3770036CAD7 /* TableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,10 +102,10 @@
 			children = (
 				1C34EB0E1C5803F800563D0E /* AppDelegate.h */,
 				1C34EB0F1C5803F800563D0E /* AppDelegate.m */,
-				1C95E2051C582FE90036CAD7 /* TableViewController.h */,
-				1C95E2061C582FE90036CAD7 /* TableViewController.m */,
-				1C34EB171C5803F800563D0E /* Assets.xcassets */,
-				1C34EB1C1C5803F800563D0E /* Info.plist */,
+				1C95E2081C59B2790036CAD7 /* TableViewController.h */,
+				1C95E2091C59B2790036CAD7 /* TableViewController.m */,
+				1C95E20B1C59B3770036CAD7 /* TableViewCell.h */,
+				1C95E20C1C59B3770036CAD7 /* TableViewCell.m */,
 				1C34EB0B1C5803F800563D0E /* Supporting Files */,
 			);
 			path = ProgrammaticTableView;
@@ -111,6 +114,8 @@
 		1C34EB0B1C5803F800563D0E /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				1C34EB171C5803F800563D0E /* Assets.xcassets */,
+				1C34EB1C1C5803F800563D0E /* Info.plist */,
 				1C34EB0C1C5803F800563D0E /* main.m */,
 			);
 			name = "Supporting Files";
@@ -263,8 +268,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				1C34EB101C5803F800563D0E /* AppDelegate.m in Sources */,
-				1C95E2071C582FE90036CAD7 /* TableViewController.m in Sources */,
+				1C95E20D1C59B3770036CAD7 /* TableViewCell.m in Sources */,
 				1C34EB0D1C5803F800563D0E /* main.m in Sources */,
+				1C95E20A1C59B2790036CAD7 /* TableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

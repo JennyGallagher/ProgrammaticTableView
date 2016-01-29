@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "TableViewCell.h"
 
 @interface TableViewController : UITableViewController <UISearchBarDelegate>
+
+@property (strong, nonatomic) NSMutableArray *resultsArray;
 
 @end
