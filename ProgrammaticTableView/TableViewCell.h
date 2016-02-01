@@ -11,7 +11,7 @@
 
 @interface TableViewCell : UITableViewCell
 
-extern NSString * const TableViewCellIdentifier;
+extern NSString * const kCellIdentifier;
 
 @property (nonatomic, strong) UILabel *artistLabel;
 @property (nonatomic, strong) UILabel *trackLabel;

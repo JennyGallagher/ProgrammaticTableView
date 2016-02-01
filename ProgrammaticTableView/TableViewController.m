@@ -66,7 +66,7 @@
 
 - (NSURL *)urlForQuery:(NSString *)query {
     query = [query stringByReplacingOccurrencesOfString:@" " withString:@"+"];
-    return [NSURL URLWithString:[NSString stringWithFormat:@"https://itunes.apple.com/search?term=%@", query]];
+    return [NSURL URLWithString:[NSString stringWithFormat:@"https://itunes.apple.com/search?term=%@&entity=musicTrack", query]];
     
 }
 
@@ -100,22 +100,31 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
     
-    TableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:TableViewCellIdentifier];
+    TableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:kCellIdentifier];
     
     if (!cell) {
         cell = [[TableViewCell alloc] init];
     }
-    
     cell.trackLabel.text = [self.resultsArray[indexPath.row] valueForKey:@"trackName"];
     cell.artistLabel.text = [self.resultsArray[indexPath.row] valueForKey:@"artistName"];
     cell.collectionLabel.text = [self.resultsArray[indexPath.row] valueForKey:@"collectionName"];
     cell.trackPriceLabel.text = [NSString stringWithFormat:@"Song: $%@",[self.resultsArray[indexPath.row] valueForKey:@"trackPrice"]];
     
-    NSData *imageData = [NSData dataWithContentsOfURL:[NSURL URLWithString:[self.resultsArray[indexPath.row] valueForKey:@"artworkUrl30"]]];
-    cell.imageView.image = [UIImage imageWithData:imageData];
-    
+    NSData *thumbnail = [NSData dataWithContentsOfURL:[NSURL URLWithString:[self.resultsArray[indexPath.row] valueForKey:@"artworkUrl100"]]];
+    if (thumbnail) {
+        cell.trackImageView.image = [UIImage imageWithData:thumbnail];
+      
+    }
     return cell;
 }
+//
+//func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat
+//{
+//    return 100.0;//Choose your custom row height
+//}
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    return 70;
+};
 
 #pragma mark UITableView delegate
 
